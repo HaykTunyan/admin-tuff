@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  frontend:
+    container_name: stuff-$UPSTREAM_PROJECT_NAME-$CI_COMMIT_TAG
+    image: $RELEASE_IMAGE
+    ports:
+      - "127.0.0.1:$ADMIN_HOST_PORT:3000"
